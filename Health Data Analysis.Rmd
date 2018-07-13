@@ -569,7 +569,7 @@ hrt <- sum(mrg8$CHD)
 
 barplot(c(l_canc, c_canc, b_canc, hrt), names.arg = c("Lung Cancer", "Colon Cancer", "Breast Cancer", "Heart Disease"), ylab = "Total Prevelance", main = "Total Deaths Per Cancer and Heart Disease", col = c("green", "yellow", "red", "darkblue"))
 
-barplot(c(sum(l_canc, c_canc, b_canc)/sum(mrg8$Total_Deaths), hrt/sum(mrg8$Total_Deaths)), names.arg = c("Cancer", "Heart Disease"), ylab = "Total Prevelance", main = "Ratio Of Disease Over Total Deaths", col = c("green", "red"))
+#barplot(c(sum(l_canc, c_canc, b_canc)/sum(mrg8$Total_Deaths), hrt/sum(mrg8$Total_Deaths)), names.arg = c("Cancer", "Heart Disease"), ylab = "Total Prevelance", main = "Ratio Of Disease Over Total Deaths", col = c("green", "red"))
 
 
 
@@ -585,7 +585,10 @@ barplot(c(sum(l_canc, c_canc, b_canc)/sum(mrg8$Total_Deaths), hrt/sum(mrg8$Total
 whi_hrt <- sum(mrg8$Whi_HeartDis)
 blk_hrt <- sum(mrg8$Blk_HeartDis)
 his_hrt <- sum(mrg8$His_HeartDis)
-oth_hrt <- sum(mrg8$)
+oth_hrt <- sum(mrg8$Oth_HeartDis)
+
+barplot(c(whi_hrt, blk_hrt, his_hrt, oth_hrt), names.arg = c("White", "Black", "Hispanic", "Other"), ylab = "Total Prevelance", main = "Total Deaths Due to Heart Disease", col = c("green", "yellow", "red", "darkblue"))
+
 ```
 
 
