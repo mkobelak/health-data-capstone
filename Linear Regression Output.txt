@@ -1,0 +1,190 @@
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+Lung_Cancer =
+
+      0.1642 * Whi_Cancer +
+      0.0854 * Blk_Cancer +
+     -0.0303 * His_Cancer +
+      0.028  * Whi_Comp +
+     -0.0334 * Blk_Comp +
+     -0.0359 * Blk_Injury +
+     -0.0414 * Oth_Injury +
+      0.0327 * Blk_Homicide +
+     -0.0588 * Whi_Suicide +
+     -0.0621 * Whi_HeartDis +
+     -0.0251 * Blk_HeartDis +
+      0.0299 * Oth_HeartDis +
+      0.0832 * Blk_HIV +
+      0.2673 * No_Exercise +
+     -0.2175 * Few_Fruit_Veg +
+      0.1685 * Obesity +
+      0.6999 * Smoker +
+      0.2759 * Diabetes +
+     -0      * Uninsured +
+     -0      * Elderly_Medicare +
+      0      * Population_Size +
+     -0.0003 * Population_Density +
+      0.5491 * Poverty +
+     -3.5793 * Age_19_Under +
+     -3.1391 * Age_19_64 +
+     -3.1834 * Age_65_84 +
+     -7.4404 * Age_85_and_Over +
+     -0.7717 * White +
+     -0.9575 * Black +
+     -1.2115 * Native_American +
+     -1.0882 * Asian +
+     -0.3248 * Hispanic +
+      0.5652 * Premature +
+      0.5523 * Under_18 +
+      0.1905 * Unmarried +
+     -0.1361 * Late_Care +
+      0.2747 * Col_Cancer +
+      0.0404 * CHD +
+      0.0566 * Stroke +
+      0.2541 * Suicide +
+    411.6591
+
+      
+
+4 Highest weights: 
+- Smoker
+- Premature (births)
+- Under_18 (births to women under 18)
+- Poverty
+
+Brst_Cancer =
+
+      0.0517 * Whi_Cancer +
+      0.0316 * Blk_Cancer +
+     -0.0143 * His_Cancer +
+      0.0303 * Oth_Cancer +
+     -0.019  * Whi_BirthDef +
+     -0.0078 * Whi_Injury +
+     -0.0691 * Whi_HeartDis +
+     -0.0169 * Blk_HeartDis +
+      0.0162 * His_HeartDis +
+     -0.0166 * Oth_HeartDis +
+      0.0609 * Few_Fruit_Veg +
+      0      * Uninsured +
+     -0      * Elderly_Medicare +
+      0.0177 * Dentist_Rate +
+     -0      * Population_Size +
+     -0.0693 * Poverty +
+      0.2401 * Age_19_Under +
+      0.2264 * Age_19_64 +
+      0.6117 * Age_85_and_Over +
+      0.2099 * White +
+      0.2676 * Black +
+      0.1402 * Native_American +
+      0.1795 * Asian +
+     -0.0454 * Hispanic +
+      0.0554 * Late_Care +
+      0.1082 * Col_Cancer +
+      0.0199 * CHD +
+      0.0265 * Lung_Cancer +
+      0.0304 * MVA +
+      0.0396 * Injury +
+      0.0003 * Total_Deaths +
+    -29.7807
+
+4 Highest Weights:
+- Age_85_And_Over (population)
+- Age_19_64 (population)
+- Age_19_Under
+- Black (population)
+
+Col_Cancer =
+
+      0.0337 * Whi_Cancer +
+      0.0167 * Blk_Cancer +
+     -0.0114 * Whi_Comp +
+      0.0206 * His_Comp +
+     -0.012  * Whi_BirthDef +
+     -0.0286 * His_BirthDef +
+     -0.0072 * Blk_Injury +
+     -0.0157 * Oth_Injury +
+     -0.0191 * Whi_HeartDis +
+     -0.0228 * Blk_HeartDis +
+     -0.0127 * Oth_HeartDis +
+      0.0885 * No_Exercise +
+      0.077  * Few_Fruit_Veg +
+      0.0358 * Obesity +
+      0.0346 * Smoker +
+     -0.1463 * Diabetes +
+      0      * Uninsured +
+     -0.0001 * Elderly_Medicare +
+      0.0131 * Number_Counties +
+     -0      * Population_Size +
+     -1.1702 * Age_19_Under +
+     -1.2622 * Age_19_64 +
+     -1.3945 * Age_65_84 +
+     -0.3607 * Age_85_and_Over +
+      0.1184 * White +
+      0.1316 * Black +
+      0.1172 * Native_American +
+      0.1682 * Asian +
+     -0.0308 * Hispanic +
+     -0.2546 * Under_18 +
+      0.3703 * Over_40 +
+      0.0744 * Unmarried +
+      0.059  * Brst_Cancer +
+      0.0159 * CHD +
+      0.0516 * Lung_Cancer +
+      0.0003 * Total_Deaths +
+    113.1651
+
+4 Highest Weights:
+- White
+- Black
+- Asian
+- Over_40 (births to women over 40)
+
+CHD =
+
+     -0.1286 * Whi_Cancer +
+     -0.2826 * Blk_Cancer +
+     -0.1113 * His_Comp +
+     -0.1244 * Whi_BirthDef +
+     -0.3216 * Blk_BirthDef +
+      0.1501 * Blk_Injury +
+      0.0833 * His_Injury +
+      0.3693 * Whi_Homicide +
+     -0.2226 * His_Homicide +
+     -0.4187 * Oth_Suicide +
+      1.722  * Whi_HeartDis +
+      0.2626 * Blk_HeartDis +
+      0.1405 * His_HeartDis +
+      0.3278 * Oth_HeartDis +
+      1.4203 * No_Exercise +
+     -0.3029 * Few_Fruit_Veg +
+      0.3091 * Smoker +
+      1.3236 * Diabetes +
+      0      * Uninsured +
+     -0.0003 * Elderly_Medicare +
+     -0.048  * Prim_Care_Phys_Rate +
+      0.1353 * Number_Counties +
+      0.0013 * Population_Density +
+      0.7446 * Poverty +
+     -2.8357 * Age_19_Under +
+     -2.7608 * Age_19_64 +
+     -2.1262 * Age_65_84 +
+     -6.1813 * Age_85_and_Over +
+     -0.4225 * Black +
+     -0.5126 * Asian +
+     -1.706  * Under_18 +
+      0.6918 * Brst_Cancer +
+      1.0657 * Col_Cancer +
+      0.4937 * Lung_Cancer +
+      0.0014 * Total_Deaths +
+    248.0974
+
+4 Highest Weights:
+- Diabetes
+- No Exercise
+- White HeartDis
+- Poverty
