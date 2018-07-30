@@ -270,10 +270,6 @@ deathdata2$D_Ot_HIV <- NULL
 
 
 
-sum(deathdata2$Blk_Cancer)
-
-
-
 
 # remove CI attributes from data
 bddata<-bddata[(grep("^CI", names(bddata), invert = TRUE))]
@@ -283,15 +279,6 @@ demogdata<-demogdata[(grep("^CI", names(demogdata), invert = TRUE))]
 riskdata<-riskdata[(grep("^CI", names(riskdata), invert = TRUE))]
 
 
-(colSums(is.na(bddata))/3141)*100
-#(colSums(is.na(demogdata))/3141)*100
-#(colSums(is.na(riskdata))/3141)*100
-
-#riskdata <- riskdata[complete.cases(riskdata[, ]), ]
-
-
-
-#(colSums(is.na(riskdata))/3141)*100
 
 
 
