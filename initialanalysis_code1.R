@@ -270,6 +270,10 @@ deathdata2$D_Ot_HIV <- NULL
 
 
 
+sum(deathdata2$Blk_Cancer)
+
+
+
 
 # remove CI attributes from data
 bddata<-bddata[(grep("^CI", names(bddata), invert = TRUE))]
@@ -290,3 +294,15 @@ mrg2 <- merge(mrgn, bddata, sort=TRUE)
 
 # Remove rows based on NA values in riskdata (do this after merge!!)
 mrg3 <- mrg2[complete.cases(mrg2[, c("No_Exercise", "Few_Fruit_Veg", "High_Blood_Pres", "Obesity", "Smoker")]), ]
+
+mrg4 <- mrg3
+mrg4$IM_Bl_Non_Hisp <- NULL
+mrg4$IM_Bl_Non_Hisp_Ind <- NULL
+mrg4$IM_Hisp <- NULL
+mrg4$IM_Hisp_Ind <- NULL
+mrg4$Homicide <- NULL
+mrg4$Homicide_Ind <- NULL
+
+
+# Now remove rows with any instances of NA
+mrg5 <- mrg4[complete.cases(mrg4),]
