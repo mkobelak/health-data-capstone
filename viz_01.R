@@ -13,14 +13,21 @@ oth_cnt <- sum(mrg8$Native_American + mrg8$Asian)
 barplot(c(whi_cnt, blk_cnt, his_cnt, oth_cnt), names.arg = c("White", "Black", "Hispanic", "Other"), ylab = "Total Prevelance", main = "Total Population Per Race", col = c("green", "yellow", "red", "darkblue"))
 
 # Ratio of total cancer deaths/total deaths in sample (per race)
-whi_rat <- whi_c/sum(mrg8$Total_Deaths, na.rm = TRUE)
-blk_rat <- blk_c/sum(mrg8$Total_Deaths, na.rm = TRUE)
-his_rat <- his_c/sum(mrg8$Total_Deaths, na.rm = TRUE)
-oth_rat <- oth_c/sum(mrg8$Total_Deaths, na.rm = TRUE)
+whi_rat <- whi_c/sum((mrg8$Whi_Cancer+mrg8$Whi_HeartDis+mrg8$Whi_HIV+mrg8$Whi_Homicide+mrg8$Whi_Injury+mrg8$Whi_Suicide+mrg8$Whi_BirthDef+mrg8$Whi_Comp), na.rm = TRUE)
+blk_rat <- blk_c/sum((mrg8$Blk_Cancer+mrg8$Blk_HeartDis+mrg8$Blk_HIV+mrg8$Blk_Homicide+mrg8$Blk_Injury+mrg8$Blk_Suicide+mrg8$Blk_BirthDef+mrg8$Blk_Comp), na.rm = TRUE)
+his_rat <- his_c/sum((mrg8$His_Cancer+mrg8$His_HeartDis+mrg8$His_HIV+mrg8$His_Homicide+mrg8$His_Injury+mrg8$His_Suicide+mrg8$His_BirthDef+mrg8$His_Comp), na.rm = TRUE)
+oth_rat <- oth_c/sum((mrg8$Oth_Cancer+mrg8$Oth_HeartDis+mrg8$Oth_HIV+mrg8$Oth_Homicide+mrg8$Oth_Injury+mrg8$Oth_Suicide+mrg8$Oth_BirthDef+mrg8$Oth_Comp), na.rm = TRUE)
 
 barplot(c(whi_rat, blk_rat, his_rat, oth_rat), names.arg = c("White", "Black", "Hispanic", "Other"), ylab = "Total Prevelance", main = "Total Deaths By Cancer Over Total Deaths Per Race", col = c("green", "yellow", "red", "darkblue"))
 
-# We can see here that zeroing the missing values has caused our ratios to be very small 
+# Ratio of total CVD deaths/total deaths in sample (per race)
+whi_rat <- sum(mrg8$Whi_HeartDis, na.rm = TRUE)/sum((mrg8$Whi_Cancer+mrg8$Whi_HeartDis+mrg8$Whi_HIV+mrg8$Whi_Homicide+mrg8$Whi_Injury+mrg8$Whi_Suicide+mrg8$Whi_BirthDef+mrg8$Whi_Comp), na.rm = TRUE)
+blk_rat <- sum(mrg8$Blk_HeartDis, na.rm = TRUE)/sum((mrg8$Blk_Cancer+mrg8$Blk_HeartDis+mrg8$Blk_HIV+mrg8$Blk_Homicide+mrg8$Blk_Injury+mrg8$Blk_Suicide+mrg8$Blk_BirthDef+mrg8$Blk_Comp), na.rm = TRUE)
+his_rat <- sum(mrg8$His_HeartDis, na.rm = TRUE)/sum((mrg8$His_Cancer+mrg8$His_HeartDis+mrg8$His_HIV+mrg8$His_Homicide+mrg8$His_Injury+mrg8$His_Suicide+mrg8$His_BirthDef+mrg8$His_Comp), na.rm = TRUE)
+oth_rat <- sum(mrg8$Oth_HeartDis, na.rm = TRUE)/sum((mrg8$Oth_Cancer+mrg8$Oth_HeartDis+mrg8$Oth_HIV+mrg8$Oth_Homicide+mrg8$Oth_Injury+mrg8$Oth_Suicide+mrg8$Oth_BirthDef+mrg8$Oth_Comp), na.rm = TRUE)
+
+barplot(c(whi_rat, blk_rat, his_rat, oth_rat), names.arg = c("White", "Black", "Hispanic", "Other"), ylab = "Total Prevelance", main = "Total Deaths By CVD Over Total Deaths Per Race", col = c("green", "yellow", "red", "darkblue"))
+
 
 # Total Deaths To Different Types of Cancers and Heart Disease
 l_canc <- sum(mrg8$Lung_Cancer)
